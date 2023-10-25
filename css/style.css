@@ -1,0 +1,326 @@
+body {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: auto 4fr;
+  grid-template-rows: 1fr 4fr;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell;
+  padding: 0;
+  margin: 0;
+}
+
+.header-container {
+  grid-column: 2/3;
+  background: white;
+  padding: 10px 50px;
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 25px;
+  position: sticky;
+}
+
+.header-container .search-container {
+  display: grid;
+  grid-template-columns: auto 3fr auto auto auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-container .search-container input {
+  height: 20px;
+  border-radius: 50px;
+  padding: 0 10px;
+  margin-right: 150px;
+  outline: none;
+  border: 3px solid #0ea5e9;
+  background: #e2e8f0;
+}
+
+.header-container .search-container input:focus {
+  border: 3px solid green;
+}
+
+.header-container .search-container img#searchIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.header-container .search-container img#searchIcon:hover {
+  cursor: pointer;
+}
+
+.header-container .search-container img#notificationIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.header-container .search-container img#notificationIcon:hover {
+  cursor: pointer;
+}
+
+.header-container .search-container img#profileIcon {
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  border: 3px solid #0ea5e9;
+}
+
+.header-container .search-container div {
+  font-weight: bold;
+}
+
+.header-container .command-container {
+  display: grid;
+  grid-template-columns: auto 3fr auto auto auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.header-container .command-container .welcome-container div {
+  font-weight: bold;
+}
+
+.header-container .command-container img#commandContainerProfileIcon {
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  border: 3px solid #0ea5e9;
+}
+
+.header-container .command-container button {
+  border-radius: 25px;
+  width: 80px;
+  height: 30px;
+  font-weight: bold;
+  border: 2px solid white;
+  background: #0ea5e9;
+  color: white;
+}
+
+.header-container .command-container button:hover {
+  cursor: pointer;
+  color: green;
+  background: white;
+  border: 3px solid green;
+}
+
+.sidebar-container {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background: #0ea5e9;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: auto 1fr 1fr;
+}
+
+.sidebar-container ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-container ul li {
+  align-items: center;
+  margin: 10px;
+}
+
+.sidebar-container ul li:hover {
+  color: #f8fafc;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.sidebar-container .dashboard-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  align-self: flex-start;
+}
+
+.sidebar-container .dashboard-container div {
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.sidebar-container .dashboard-container img#viewDashboard {
+  height: 50px;
+  width: 50px;
+}
+
+.sidebar-container ul li {
+  list-style-type: none;
+  display: flex;
+}
+
+.sidebar-container ul li img {
+  height: 25px;
+  width: 25px;
+  margin-right: 10px;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: 1fr 1fr;
+  padding: 20px;
+  background: #e2e8f0;
+  column-gap: 20px;
+  row-gap: 30px;
+}
+
+.content-container .projects-container {
+  grid-row: 1/3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  gap: 15px;
+}
+
+.content-container .projects-container .projects-list-icon {
+  height: 20px;
+  width: 20px;
+}
+
+.content-container .projects-container div {
+  font-weight: bold;
+}
+
+.content-container .projects-container .description {
+  font-weight: normal;
+}
+
+.content-container .projects-container .projects-container-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 1fr;
+  grid-auto-rows: 1fr;
+  gap: 15px;
+}
+
+.content-container
+  .projects-container
+  .projects-container-list
+  .projects-container-item {
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+  padding: 15px 20px;
+  border-left: 10px solid #f59e0b;
+  border-radius: 10px;
+  background: white;
+}
+
+.content-container
+  .projects-container
+  .projects-container-list
+  .projects-container-item
+  .button-container {
+  display: flex;
+  justify-content: end;
+  gap: 30px;
+}
+
+.content-container
+  .projects-container
+  .projects-container-list
+  .projects-container-item
+  .button-container:hover {
+  cursor: pointer;
+}
+
+.content-container .announcement-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  justify-content: start;
+}
+
+.content-container .announcement-container > div {
+  font-weight: bold;
+}
+
+.content-container .announcement-container .description {
+  font-weight: normal;
+}
+
+.content-container .announcement-container .announcement-container-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 100px);
+  background: white;
+  border-radius: 5px;
+  padding: 25px;
+}
+
+.content-container
+  .announcement-container
+  .announcement-container-list
+  .announcement-container-item {
+  padding: 10px;
+  overflow: auto;
+  width: auto;
+  border-bottom: 1px solid gray;
+}
+
+.content-container
+  .announcement-container
+  .announcement-container-list
+  .announcement-container-item
+  .title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.content-container .trending-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  row-gap: 15px;
+}
+
+.content-container .trending-container > div {
+  font-weight: bold;
+}
+
+.content-container .trending-container .trending-container-list {
+  display: grid;
+  padding: 25px;
+  background: white;
+  border-radius: 5px;
+}
+
+.content-container
+  .trending-container
+  .trending-container-list
+  .trending-container-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 30px;
+  align-items: center;
+  border-bottom: 1px solid gray;
+}
+
+.content-container
+  .trending-container
+  .trending-container-list
+  .trending-container-item
+  .user-username {
+  align-self: flex-end;
+}
+
+.content-container
+  .trending-container
+  .trending-container-list
+  .trending-container-item
+  .user-title {
+  align-self: flex-start;
+}
+
+.content-container
+  .trending-container
+  .trending-container-list
+  .trending-container-item
+  img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100px;
+  grid-row: 1/3;
+}
